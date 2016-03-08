@@ -185,6 +185,8 @@ int parse_ihex(int fd, struct ihex_file *file)
 	if (chunk)
 		free(chunk);
 
+	if (state != STATE_DONE)
+		return -1;
 	return 0;
 }
 
@@ -379,8 +381,13 @@ int main(int argc, char *argv[])
 		perror("Failed to open file");
 		exit(1);
 	}
-	parse_ihex(fd, &ihex_file);
+	ret = parse_ihex(fd, &ihex_file);
 	close(fd);
+
+	if (ret) {
+		printf("Failed to parse ihex file \"%s\". Aborting.\n", argv[1]);
+		exit(1);
+	}
 
 	for (chunk = ihex_file.first; chunk; chunk = chunk->next) {
 		if (chunk->len != 0x10 || chunk->addr != addr) {
