@@ -48,6 +48,9 @@ enum state {
 	STATE_DONE,
 };
 
+static unsigned int line = 1;
+static unsigned int character = 0;
+
 static int get_token(int fd)
 {
 	unsigned char c;
@@ -56,7 +59,21 @@ static int get_token(int fd)
 	ret = read(fd, &c, 1);
 	if (ret <= 0)
 		return -1;
+
+	if (c == '\n') {
+		line++;
+		character = 0;
+	}
+
+	character++;
+
 	return c;
+}
+
+static void err_unexpected_char(int c)
+{
+	fprintf(stderr, "Unexpected character: %x at line %d(%d)\n", c, line,
+		character);
 }
 
 static int get_hex_token(int fd, unsigned int len, unsigned int *val)
@@ -76,7 +93,7 @@ static int get_hex_token(int fd, unsigned int len, unsigned int *val)
 		} else if (c >= 'A' && c <= 'F') {
 			*val |= c - 'A' + 10;
 		} else {
-			fprintf(stderr, "Unexpected character: %x\n", c);
+			err_unexpected_char(c);
 			return -1;
 		}
 	}
@@ -110,7 +127,7 @@ int parse_ihex(int fd, struct ihex_file *file)
 				state = STATE_LINE_LENGTH;
 				break;
 			default:
-				fprintf(stderr, "Unexpected character: %x\n", c);
+				err_unexpected_char(c);
 				state = STATE_ERROR;
 				break;
 			}
