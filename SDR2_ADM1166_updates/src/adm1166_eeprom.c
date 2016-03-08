@@ -376,6 +376,11 @@ int main(int argc, char *argv[])
 	int fd, i2c_fd;
 	int ret;
 
+	if (argc < 2) {
+		printf("Usage: %s <ihex-file>\n", argv[0]);
+		return 0;
+	}
+
 	fd = open(argv[1], 0);
 	if (fd < 0) {
 		perror("Failed to open file");
