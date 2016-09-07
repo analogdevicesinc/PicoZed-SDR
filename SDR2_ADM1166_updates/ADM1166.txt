@@ -1,12 +1,12 @@
+Off Line file
+
 Device: ADM1166
 
 SW Version: 4.2.3
 
-Configuration Version: 632F - D3
-
 File Path = C:\Users\NWilson3\Desktop\PicoZed-SDR-master\PicoZed-SDR-master\SDR2_ADM1166_updates\ADM1166.txt
 
-Date Created: Friday, August 26, 2016 4:48:08 PM
+Date Created: Wednesday, September 07, 2016 12:33:18 PM
 
 #LV61#  #AD0.047600#
 	
@@ -14,12 +14,9 @@ Date Created: Friday, August 26, 2016 4:48:08 PM
 	DO NOT MANUALLY EDIT THIS FILE.
 ALL CHANGES MUST BE MADE USING THE DEVELOPMENT TOOL.	
 	
-	#No Evaluation Board Settings Saved#	
-	
 	
 	Pin Names
         ---------	
-	
 	<<0 0.95V >>
 	<<1 1.0V >>
 	<<2 JX_MGTAVCC >>
@@ -55,7 +52,6 @@ ALL CHANGES MUST BE MADE USING THE DEVELOPMENT TOOL.
 	
 	State Names
         -----------	
-	
 	<<<1 Check VIN  >>>
 	<<<2 VIN Error  >>>
 	<<<3 Wait - VIN >>>
@@ -122,12 +118,11 @@ ALL CHANGES MUST BE MADE USING THE DEVELOPMENT TOOL.
 	
 	
 	
-	Configuration Register Locations
-        --------------------------------	
-	
-	<00;59> PS10VTH
+	Controlling Register Locations
+        ------------------------------	
+	<00;57> PS10VTH
 	<01;00> PS1OVHYST
-	<02;46> PS1UVTH
+	<02;49> PS1UVTH
 	<03;00> PS1UVHYST
 	<04;1D> SFDV1CFG
 	<05;01> SFDV1SEL
@@ -165,15 +160,15 @@ ALL CHANGES MUST BE MADE USING THE DEVELOPMENT TOOL.
 	<25;00> SFDVHSEL
 	<26;00> RESERVED LOCATION
 	<27;1F> PDO5CFG
-	<28;82> X1OVTH
-	<29;01> X1OVHYST
+	<28;7E> X1OVTH
+	<29;00> X1OVHYST
 	<2A;72> X1UVTH
-	<2B;01> X1UVHYST
+	<2B;00> X1UVHYST
 	<2C;1D> SFDX1CFG
 	<2D;00> SFDVX1SEL
 	<2E;00> GPIX1CFG
 	<2F;1F> PDO6CFG
-	<30;98> X2OVTH
+	<30;97> X2OVTH
 	<31;00> X2OVHYST
 	<32;78> X2UVTH
 	<33;00> X2UVHYST
@@ -181,17 +176,17 @@ ALL CHANGES MUST BE MADE USING THE DEVELOPMENT TOOL.
 	<35;00> SFDVX2SEL
 	<36;00> GPIX2CFG
 	<37;1F> PDO7CFG
-	<38;98> X3OVTH
+	<38;A1> X3OVTH
 	<39;00> X3OVHYST
-	<3A;78> X3UVTH
+	<3A;7F> X3UVTH
 	<3B;00> X3UVHYST
 	<3C;1D> SFDX3CFG
 	<3D;00> SFDVX3SEL
 	<3E;00> GPIX3CFG
 	<3F;1F> PDO8CFG
-	<40;D7> X4OVTH
+	<40;D1> X4OVTH
 	<41;00> X4OVHYST
-	<42;B7> X4UVTH
+	<42;BE> X4UVTH
 	<43;00> X4UVHYST
 	<44;1D> SFDX4CFG
 	<45;00> SFDVX4SEL
@@ -283,16 +278,15 @@ ALL CHANGES MUST BE MADE USING THE DEVELOPMENT TOOL.
 	<9B;00> BBWRTRG8(116X)
 	<9C;00> BBCTRL(116X)
 	
-	Configurable Locations Checksum = F41Bh	
+	Configurable Locations Checksum = F410h	
 	
 	
 	
 	Configuration EEPROM Locations
         ------------------------------	
-	
-	<F8;00;59> PS10VTH
+	<F8;00;57> PS10VTH
 	<F8;01;00> PS1OVHYST
-	<F8;02;46> PS1UVTH
+	<F8;02;49> PS1UVTH
 	<F8;03;00> PS1UVHYST
 	<F8;04;1D> SFDV1CFG
 	<F8;05;01> SFDV1SEL
@@ -330,15 +324,15 @@ ALL CHANGES MUST BE MADE USING THE DEVELOPMENT TOOL.
 	<F8;25;00> SFDVHSEL
 	<F8;26;00> RESERVED LOCATION
 	<F8;27;1F> PDO5CFG
-	<F8;28;82> X1OVTH
-	<F8;29;01> X1OVHYST
+	<F8;28;7E> X1OVTH
+	<F8;29;00> X1OVHYST
 	<F8;2A;72> X1UVTH
-	<F8;2B;01> X1UVHYST
+	<F8;2B;00> X1UVHYST
 	<F8;2C;1D> SFDX1CFG
 	<F8;2D;00> SFDVX1SEL
 	<F8;2E;00> GPIX1CFG
 	<F8;2F;1F> PDO6CFG
-	<F8;30;98> X2OVTH
+	<F8;30;97> X2OVTH
 	<F8;31;00> X2OVHYST
 	<F8;32;78> X2UVTH
 	<F8;33;00> X2UVHYST
@@ -346,17 +340,17 @@ ALL CHANGES MUST BE MADE USING THE DEVELOPMENT TOOL.
 	<F8;35;00> SFDVX2SEL
 	<F8;36;00> GPIX2CFG
 	<F8;37;1F> PDO7CFG
-	<F8;38;98> X3OVTH
+	<F8;38;A1> X3OVTH
 	<F8;39;00> X3OVHYST
-	<F8;3A;78> X3UVTH
+	<F8;3A;7F> X3UVTH
 	<F8;3B;00> X3UVHYST
 	<F8;3C;1D> SFDX3CFG
 	<F8;3D;00> SFDVX3SEL
 	<F8;3E;00> GPIX3CFG
 	<F8;3F;1F> PDO8CFG
-	<F8;40;D7> X4OVTH
+	<F8;40;D1> X4OVTH
 	<F8;41;00> X4OVHYST
-	<F8;42;B7> X4UVTH
+	<F8;42;BE> X4UVTH
 	<F8;43;00> X4UVHYST
 	<F8;44;1D> SFDX4CFG
 	<F8;45;00> SFDVX4SEL
@@ -426,7 +420,7 @@ ALL CHANGES MUST BE MADE USING THE DEVELOPMENT TOOL.
 	<F8;85;00> RESERVED LOCATION
 	<F8;86;00> RESERVED LOCATION
 	<F8;87;00> RESERVED LOCATION
-	<F8;88;1B> CONFIGURATION EEPROM CHECKSUM LSB
+	<F8;88;10> CONFIGURATION EEPROM CHECKSUM LSB
 	<F8;89;F4> CONFIGURATION EEPROM CHECKSUM MSB
 	<F8;8A;BB> USER EEPROM CHECKSUM LSB
 	<F8;8B;BE> USER EEPROM CHECKSUM MSB
@@ -547,13 +541,12 @@ ALL CHANGES MUST BE MADE USING THE DEVELOPMENT TOOL.
 	<F8;FE;00> RESERVED LOCATION
 	<F8;FF;00> RESERVED LOCATION
 	
-	Configurable EEPROM Locations Checksum = F41Bh	
+	Configurable EEPROM Locations Checksum = F410h	
 	
 	
 	
 	User EEPROM Locations
         ---------------------	
-	
 	<F9;00;7F> USER EEPROM
 	<F9;01;FC> USER EEPROM
 	<F9;02;BF> USER EEPROM
@@ -816,8 +809,7 @@ ALL CHANGES MUST BE MADE USING THE DEVELOPMENT TOOL.
 	
 	
 	Sequence Engine EEPROM Locations
-        -------------------------------------	
-	
+        --------------------------------	
 	RESERVED STATE
 	<FA;00;00> 
 	<FA;01;00> 
@@ -1460,6 +1452,10 @@ ALL CHANGES MUST BE MADE USING THE DEVELOPMENT TOOL.
 		
 	Sequencing Engine Checksum = FC8F6h	
 	
+	
+	
+	DAC Data
+        --------	
 	FB0
 	Margining D1 0; 0.00;> 
 	Margining D1 1; 0.00;> 
@@ -1474,7 +1470,7 @@ ALL CHANGES MUST BE MADE USING THE DEVELOPMENT TOOL.
 	Margining D1 10; 0.00;> 
 	Margining D1 11; 0.00;> 
 	Margining D1 12; 0.00;> 
-		
+			
 	FB1
 	Margining D2 0; 0.00;> 
 	Margining D2 1; 0.00;> 
@@ -1489,7 +1485,7 @@ ALL CHANGES MUST BE MADE USING THE DEVELOPMENT TOOL.
 	Margining D2 10; 0.00;> 
 	Margining D2 11; 0.00;> 
 	Margining D2 12; 0.00;> 
-		
+			
 	FB2
 	Margining D3 0; 0.00;> 
 	Margining D3 1; 0.00;> 
@@ -1504,7 +1500,7 @@ ALL CHANGES MUST BE MADE USING THE DEVELOPMENT TOOL.
 	Margining D3 10; 0.00;> 
 	Margining D3 11; 0.00;> 
 	Margining D3 12; 0.00;> 
-		
+			
 	FB3
 	Margining D4 0; 0.00;> 
 	Margining D4 1; 0.00;> 
@@ -1519,7 +1515,7 @@ ALL CHANGES MUST BE MADE USING THE DEVELOPMENT TOOL.
 	Margining D4 10; 0.00;> 
 	Margining D4 11; 0.00;> 
 	Margining D4 12; 0.00;> 
-		
+			
 	DAC5
 	Margining D5 0; 0.00;> 
 	Margining D5 1; 0.00;> 
@@ -1534,7 +1530,7 @@ ALL CHANGES MUST BE MADE USING THE DEVELOPMENT TOOL.
 	Margining D5 10; 0.00;> 
 	Margining D5 11; 0.00;> 
 	Margining D5 12; 0.00;> 
-		
+			
 	DAC6
 	Margining D6 0; 0.00;> 
 	Margining D6 1; 0.00;> 
@@ -1549,39 +1545,37 @@ ALL CHANGES MUST BE MADE USING THE DEVELOPMENT TOOL.
 	Margining D6 10; 0.00;> 
 	Margining D6 11; 0.00;> 
 	Margining D6 12; 0.00;> 
-		
+			
 	
 	
 	FB0
 	 PD1 0; 1000.00;> 
 	 PD1 1; 1000.00;> 
 	 PD1 2; 0.00;> 
-		
+			
 	FB1
 	 PD2 0; 1000.00;> 
 	 PD2 1; 1000.00;> 
 	 PD2 2; 0.00;> 
-		
+			
 	FB2
 	 PD3 0; 1000.00;> 
 	 PD3 1; 1000.00;> 
 	 PD3 2; 0.00;> 
-		
+			
 	FB3
 	 PD4 0; 1000.00;> 
 	 PD4 1; 1000.00;> 
 	 PD4 2; 0.00;> 
-		
+			
 	DAC5
 	 PD5 0; 1000.00;> 
 	 PD5 1; 1000.00;> 
 	 PD5 2; 0.00;> 
-		
+			
 	DAC6
 	 PD6 0; 1000.00;> 
 	 PD6 1; 1000.00;> 
 	 PD6 2; 0.00;> 
-		
-	
+			
 
-Intel hex Master Checksum = 196Eh
